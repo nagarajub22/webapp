@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
 @import './reset.scss';
 
-$color_background: #000005;
-$color_primaryText: #a3a390;
-$color_primaryText_hightlight: #f8de7f;
+$color_primaryText: #ffffff;
+$color_primaryText_hightlight: #ffe878;
 
 html,
 body {
@@ -16,9 +15,7 @@ body {
 }
 
 body {
-  background: $color_background url('../files/background.png') no-repeat;
-  background-size: cover;
-  background-position: 105% 0;
+  background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
 }
 
 header {
@@ -34,7 +31,6 @@ footer {
   font-size: 1em;
 
   #w-copyright {
-    color: #a5a2a2;
     font-size: 0.8em;
     text-align: right;
     padding: 10px 20px;
@@ -42,8 +38,10 @@ footer {
 }
 
 a.w-logo {
+  font-size: 1em;
   text-decoration: none;
-  color: $color_primaryText;
+  color: #fff1bf;
+  text-shadow: 0px 0px 0px rgba($color: #46407e, $alpha: 1.0);
 }
 
 ul.w-menu {
@@ -77,25 +75,39 @@ ul.w-menu {
     height: 100%;
   }
 }
+#w-intro {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5em 0em;
+}
 
 #w-intro-left {
-  width: 520px;
   h2 {
-    font-size: 2.2em;
+    font-size: 2em;
     line-height: 1.3em;
-    color: $color_primaryText_hightlight;
+    color: $color_primaryText;
   }
   p {
-    font-size: 0.9em;
+    font-size: 1.1em;
+    line-height: 1.4em;
     margin-top: 10px;
-    color: $color_primaryText;
+    color: $color_primaryText_hightlight;
+  }
+}
+
+#w-intro-right {
+  svg {
+    width: 100%;
+    height: 100%;
   }
 }
 
 /* Desktops and laptops ----------- */
 @media only screen and (min-width: 1224px) {
   header {
-    padding: 2.5em 5em;
+    padding: 2.5em 7.5em;
   }
 
   footer {
@@ -103,15 +115,19 @@ ul.w-menu {
   }
 
   #w-intro-left {
-    position: fixed;
-    left: 10em;
-    top: calc((100% - 190px) / 2);
+    padding-left: 12em;
+  }
+
+  #w-intro-right {
+    padding-right: 12em;
+    width: 600px;
+    height: 500px;
   }
 }
 
 /* Large screens ----------- */
 @media only screen and (min-width: 1824px) {
   header {
-    padding: 2.5em 5em;
+    padding: 2.5em 7.5em;
   }
 }
