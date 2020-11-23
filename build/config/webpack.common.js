@@ -1,8 +1,9 @@
 const htmlWebpackPlugin = require('html-webpack-plugin');
 const minifyCssPlugin = require('mini-css-extract-plugin');
+const path = require('path');
 
 module.exports = {
-  entry: ['./src/index.js', './src/scss/style.scss'],
+  entry: ['./src/index.ts', './src/scss/style.scss'],
   module: {
     rules: [
       {
@@ -32,16 +33,18 @@ module.exports = {
         ],
       },
       {
-        test: /\.m?js$/,
-        exclude: /(node_modules|bower_components)/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env']
-          }
-        }
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
       }
     ],
+  },
+  resolve: {
+    extensions: [ '.tsx', '.ts', '.js' ],
+  },
+  output: {
+    filename: 'main.js',
+    path: path.resolve(__dirname, '../../dist'),
   },
   plugins: [
     new htmlWebpackPlugin({
