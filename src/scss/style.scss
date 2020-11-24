@@ -2,6 +2,8 @@
 // @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap');
 @import './reset.scss';
 
 $color_primaryText: #ffffff;
@@ -13,14 +15,11 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  font: 20px/28px 'Oxygen', sans-serif;
-  font-weight: 300;
-  color: $color_primaryText;
+  font: 500 18px/28px 'Manrope', sans-serif;
+  color: #000000;
 }
 
-body {
-  background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
-}
+body {}
 
 header {
   width: 100%;
@@ -50,9 +49,8 @@ footer {
 }
 
 a.w-logo {
+  color: #000000;
   text-decoration: none;
-  color: #ffffff;
-  text-shadow: 0px 0px 0px rgba($color: #46407e, $alpha: 1.0);
 }
 
 ul.w-menu {
@@ -67,26 +65,12 @@ ul.w-menu {
   }
 
   a {
+    color: #000000;
     text-decoration: none;
-    color: $color_primaryText;
     text-transform: lowercase;
     position: relative;
   }
 
-  a:before {
-    content: attr(data-text);
-    position: absolute;
-    color: $color_primaryText_hightlight;
-    height: 0px;
-    // top: -2px;
-    left: 0px;
-    overflow: hidden;
-    transition: all 450ms ease-in-out;
-  }
-
-  a:hover::before {
-    height: 100%;
-  }
 }
 
 #w-intro {
@@ -107,19 +91,22 @@ ul.w-menu {
 #w-intro-left {
   padding-left: 2em;
   h2 {
-    font: 2em 'Inconsolata', sans-serif;
+    font: 700 2.8em 'Sulphur Point', sans-serif;
     line-height: 1.3em;
-    color: $color_primaryText;
+    color: #000000;
   }
   p {
-    font-size: 1.1em;
+    font-size: 1em;
+    font-weight: 500;
     line-height: 1.4em;
-    margin-top: 10px;
-    color: $color_primaryText_hightlight;
+    color: #777777;
   }
 }
 
 #w-intro-right {
+  margin-top: -15px;
+  padding: 15px;
+  background: linear-gradient(95deg,#ffffff,#f1f1f1);
   svg {
     width: 100%;
     height: 100%;
@@ -141,7 +128,7 @@ ul.w-menu {
 
 
   #w-intro-right {
-    padding-right: 2em;
+    margin-right: 2em;
     width: 400px;
     height: 400px;
   }
