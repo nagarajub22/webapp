@@ -1,7 +1,7 @@
 {
   "name": "witsnest",
   "version": "1.0.0",
-  "description": "A Witsnest company",
+  "description": "Digital web solutions provider",
   "private": "true",
   "scripts": {
     "app:build": "webpack --config build/config/webpack.dev.js",
